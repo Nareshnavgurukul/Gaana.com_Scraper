@@ -1,4 +1,4 @@
-import requests
+import requests,webbrowser
 from bs4 import BeautifulSoup
 P = "https://gaana.com/playlist/gaana-dj-punjabi-top-50-1"
 B = "https://gaana.com/playlist/gaana-dj-bollywood-top-50-1"
@@ -27,20 +27,21 @@ def songs(url):
 		Play["Type"] = url[42:-7]
 		storage.append(Play)
 
-	userAlpha = input("Enter the starting alphabet of your song_ _ _ _. ").upper()
+	userAlpha = input("Enter the starting alphabet of your song_ _ _ _. ").upper()#C
 	pos = 0
-	chose = {}
+	choice  = {}
 	for i in storage:
 		if userAlpha == i["Song"][0]:
 			pos+=1
 			if pos>=1:
 				print(pos,i["Song"])
-				chose[pos] = i["SongUrl"]
+				choice [pos] = i["SongUrl"]
 	if pos>=1:
-		demand = int(input("Enter your chose:_ _ _ "))
-		print("This is the song",chose[demand])
+		demand = int(input("Enter your choice :_ _ _ "))
+		Playthis = choice [demand]
+		webbrowser.open_new_tab(Playthis)
 	else:
-		print("There no song starting with",userAlpha)
+		print("There is no song starting with",userAlpha)
 
 if userinput == 1:
 	songs(B)
