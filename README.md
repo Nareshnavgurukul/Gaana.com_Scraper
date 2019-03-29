@@ -1,6 +1,5 @@
 Scraper of Gaana.com
-
-It will ask the user their choice like Bollywood,Punjabi,International of Top 50 of that Time. it will also ask the starting alphabet and then it will display the list of song of your choice.
+It will ask the query of the user like Bollywood, Punjabi, International of Top 50 of that Time. It will also ask the starting alphabet and then it will display the list of song of your choice and again you have to give input of the song rank and then it will play the song on your browser's new tab.
 
 Here are the list of songs type
 1. Bollywood Top 50
